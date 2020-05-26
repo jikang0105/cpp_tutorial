@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{c93650aa-0dcd-4661-bbd5-8e47d86fb3aa}</ProjectGuid>
-    <RootNamespace>AssortRockCtutorial</RootNamespace>
+    <ProjectGuid>{49fb05be-70c9-4069-8811-458fd16998f2}</ProjectGuid>
+    <RootNamespace>My5bitlogicalshiftopreators</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>1.create_project_and_output</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -140,7 +139,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="create_project_and_output1.cpp" />
+    <ClCompile Include="bit_logical_shift_operator2.cpp" />
+    <ClCompile Include="bit_logical_shift_operators1.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

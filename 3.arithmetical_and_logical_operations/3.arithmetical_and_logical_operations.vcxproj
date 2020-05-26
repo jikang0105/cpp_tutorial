@@ -21,10 +21,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{c93650aa-0dcd-4661-bbd5-8e47d86fb3aa}</ProjectGuid>
-    <RootNamespace>AssortRockCtutorial</RootNamespace>
+    <ProjectGuid>{a0aa68e0-efa3-4c14-b80c-abd874709412}</ProjectGuid>
+    <RootNamespace>My3arithmeticalandlogicaloperations</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>1.create_project_and_output</ProjectName>
+    <ProjectName>3.arithmetical_and_logical_operators</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -140,7 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="create_project_and_output1.cpp" />
+    <ClCompile Include="arithmetic_and_logical_operators1.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

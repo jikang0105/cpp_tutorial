@@ -15,7 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="create_project_and_output1.cpp">
+    <ClCompile Include="bit_logical_shift_operators1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="bit_logical_shift_operator2.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

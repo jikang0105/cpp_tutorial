@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="create_project_and_output1.cpp">
+    <ClCompile Include="arithmetic_and_logical_operators1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

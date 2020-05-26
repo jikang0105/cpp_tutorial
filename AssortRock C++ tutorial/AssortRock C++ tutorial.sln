@@ -3,19 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1.create_project_and_output", "AssortRock C++ tutorial.vcxproj", "{C93650AA-0DCD-4661-BBD5-8E47D86FB3AA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01.create_project_and_output", "AssortRock C++ tutorial.vcxproj", "{C93650AA-0DCD-4661-BBD5-8E47D86FB3AA}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2.variable", "..\2.variable\2.variable.vcxproj", "{BC636607-86DC-4280-8572-5102CAC3BD25}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02.variable", "..\2.variable\2.variable.vcxproj", "{BC636607-86DC-4280-8572-5102CAC3BD25}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3.arithmetical_and_logical_operators", "..\3.arithmetical_and_logical_operations\3.arithmetical_and_logical_operations.vcxproj", "{A0AA68E0-EFA3-4C14-B80C-ABD874709412}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03.arithmetical_and_logical_operators", "..\3.arithmetical_and_logical_operations\3.arithmetical_and_logical_operations.vcxproj", "{A0AA68E0-EFA3-4C14-B80C-ABD874709412}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4.bit_logical_operator", "..\4.bit_logical_operator\4.bit_logical_operator.vcxproj", "{BDBAB281-5570-4FDB-8AD8-10190B89652E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04.bit_logical_operator", "..\4.bit_logical_operator\4.bit_logical_operator.vcxproj", "{BDBAB281-5570-4FDB-8AD8-10190B89652E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "5.bit_logical_shift_opreators", "..\5.bit_logical_shift_opreators\5.bit_logical_shift_opreators.vcxproj", "{49FB05BE-70C9-4069-8811-458FD16998F2}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "05.bit_logical_shift_opreators", "..\5.bit_logical_shift_opreators\5.bit_logical_shift_opreators.vcxproj", "{49FB05BE-70C9-4069-8811-458FD16998F2}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6.if", "..\6.if\6.if.vcxproj", "{5A81C83D-94CD-492C-8893-3487BDC0B697}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "06.if", "..\6.if\6.if.vcxproj", "{5A81C83D-94CD-492C-8893-3487BDC0B697}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6.random_number_probability_if", "..\6.random_number_if\6.random_number_if.vcxproj", "{B9F7B217-E5F8-4D40-9002-02ADD4007E8D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "07.random_number_probability_if", "..\6.random_number_if\6.random_number_if.vcxproj", "{B9F7B217-E5F8-4D40-9002-02ADD4007E8D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "08.switch_enum", "..\8.switch_enum\8.switch_enum.vcxproj", "{6ABFE541-56A6-422E-B3B8-BF834F9A1729}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "09.while_rock_paper_scissors", "..\9.while_rock_paper_scissors\9.while_rock_paper_scissors.vcxproj", "{C2F5699E-A9B2-4CEF-B758-153AE9806C01}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "10.for", "..\10.for\10.for.vcxproj", "{73F0C577-7F9D-48C9-93AC-5F3342BA7087}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +87,30 @@ Global
 		{B9F7B217-E5F8-4D40-9002-02ADD4007E8D}.Release|x64.Build.0 = Release|x64
 		{B9F7B217-E5F8-4D40-9002-02ADD4007E8D}.Release|x86.ActiveCfg = Release|Win32
 		{B9F7B217-E5F8-4D40-9002-02ADD4007E8D}.Release|x86.Build.0 = Release|Win32
+		{6ABFE541-56A6-422E-B3B8-BF834F9A1729}.Debug|x64.ActiveCfg = Debug|x64
+		{6ABFE541-56A6-422E-B3B8-BF834F9A1729}.Debug|x64.Build.0 = Debug|x64
+		{6ABFE541-56A6-422E-B3B8-BF834F9A1729}.Debug|x86.ActiveCfg = Debug|Win32
+		{6ABFE541-56A6-422E-B3B8-BF834F9A1729}.Debug|x86.Build.0 = Debug|Win32
+		{6ABFE541-56A6-422E-B3B8-BF834F9A1729}.Release|x64.ActiveCfg = Release|x64
+		{6ABFE541-56A6-422E-B3B8-BF834F9A1729}.Release|x64.Build.0 = Release|x64
+		{6ABFE541-56A6-422E-B3B8-BF834F9A1729}.Release|x86.ActiveCfg = Release|Win32
+		{6ABFE541-56A6-422E-B3B8-BF834F9A1729}.Release|x86.Build.0 = Release|Win32
+		{C2F5699E-A9B2-4CEF-B758-153AE9806C01}.Debug|x64.ActiveCfg = Debug|x64
+		{C2F5699E-A9B2-4CEF-B758-153AE9806C01}.Debug|x64.Build.0 = Debug|x64
+		{C2F5699E-A9B2-4CEF-B758-153AE9806C01}.Debug|x86.ActiveCfg = Debug|Win32
+		{C2F5699E-A9B2-4CEF-B758-153AE9806C01}.Debug|x86.Build.0 = Debug|Win32
+		{C2F5699E-A9B2-4CEF-B758-153AE9806C01}.Release|x64.ActiveCfg = Release|x64
+		{C2F5699E-A9B2-4CEF-B758-153AE9806C01}.Release|x64.Build.0 = Release|x64
+		{C2F5699E-A9B2-4CEF-B758-153AE9806C01}.Release|x86.ActiveCfg = Release|Win32
+		{C2F5699E-A9B2-4CEF-B758-153AE9806C01}.Release|x86.Build.0 = Release|Win32
+		{73F0C577-7F9D-48C9-93AC-5F3342BA7087}.Debug|x64.ActiveCfg = Debug|x64
+		{73F0C577-7F9D-48C9-93AC-5F3342BA7087}.Debug|x64.Build.0 = Debug|x64
+		{73F0C577-7F9D-48C9-93AC-5F3342BA7087}.Debug|x86.ActiveCfg = Debug|Win32
+		{73F0C577-7F9D-48C9-93AC-5F3342BA7087}.Debug|x86.Build.0 = Debug|Win32
+		{73F0C577-7F9D-48C9-93AC-5F3342BA7087}.Release|x64.ActiveCfg = Release|x64
+		{73F0C577-7F9D-48C9-93AC-5F3342BA7087}.Release|x64.Build.0 = Release|x64
+		{73F0C577-7F9D-48C9-93AC-5F3342BA7087}.Release|x86.ActiveCfg = Release|Win32
+		{73F0C577-7F9D-48C9-93AC-5F3342BA7087}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

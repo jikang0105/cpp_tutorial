@@ -24,7 +24,7 @@
     <ProjectGuid>{a0aa68e0-efa3-4c14-b80c-abd874709412}</ProjectGuid>
     <RootNamespace>My3arithmeticalandlogicaloperations</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>3.arithmetical_and_logical_operators</ProjectName>
+    <ProjectName>03.arithmetical_and_logical_operators</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

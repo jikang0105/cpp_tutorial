@@ -24,6 +24,7 @@
     <ProjectGuid>{49fb05be-70c9-4069-8811-458fd16998f2}</ProjectGuid>
     <RootNamespace>My5bitlogicalshiftopreators</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>05.bit_logical_shift_opreators</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

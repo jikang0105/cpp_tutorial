@@ -21,10 +21,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{c93650aa-0dcd-4661-bbd5-8e47d86fb3aa}</ProjectGuid>
-    <RootNamespace>AssortRockCtutorial</RootNamespace>
+    <ProjectGuid>{c2f5699e-a9b2-4cef-b758-153ae9806c01}</ProjectGuid>
+    <RootNamespace>My9whilerockpaperscissors</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>01.create_project_and_output</ProjectName>
+    <ProjectName>09.while_rock_paper_scissors</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -140,7 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="create_project_and_output1.cpp" />
+    <ClCompile Include="while_rock_paper_scissors1.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -21,10 +21,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{c93650aa-0dcd-4661-bbd5-8e47d86fb3aa}</ProjectGuid>
-    <RootNamespace>AssortRockCtutorial</RootNamespace>
+    <ProjectGuid>{6abfe541-56a6-422e-b3b8-bf834f9a1729}</ProjectGuid>
+    <RootNamespace>My8switchenum</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>01.create_project_and_output</ProjectName>
+    <ProjectName>08.switch_enum</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -140,7 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="create_project_and_output1.cpp" />
+    <ClCompile Include="switch_enum1.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -24,7 +24,7 @@
     <ProjectGuid>{b9f7b217-e5f8-4d40-9002-02add4007e8d}</ProjectGuid>
     <RootNamespace>My6randomnumberif</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>6.random_number_probability_if</ProjectName>
+    <ProjectName>07.random_number_probability_if</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

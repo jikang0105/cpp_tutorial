@@ -41,9 +41,19 @@ int main() {
 			iCount = iLine - 1 - i;
 		}
 
+		// i값이 0, 1, 2, 3 일때는 iCount는 i값을 그대로 대입된다.
+		// i값이 4, 5, 6 일때는 iCount는 2, 1, 0 이 된다.
+		// 즉, 최종 i값은 0. 1, 2, 3, 2, 1, 0 으로 돌아가게 도니다.
+
 		for (int j = 0; j < 3 - iCount; ++j) {
 			cout << " ";
 		}
+
+		for (int j = 0; j < iCount * 2 + 1; ++j) {
+			cout << "*";
+		}
+
+		cout << endl;
 		
 		// 공백 : 3, 2, 1, 0, 1, 2, 3
 

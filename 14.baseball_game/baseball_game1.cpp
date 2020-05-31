@@ -36,36 +36,41 @@ int main() {
 
 	for (int i = 0; i < 100; ++i) {
 		iDx1 = rand() % 9;
-		iDx1 = rand() % 8;
+		iDx2 = rand() % 9;
 
 		iTemp = iOtoN[iDx1];
 		iOtoN[iDx1] = iOtoN[iDx2];
 		iOtoN[iDx2] = iTemp;
 	}
 
+	cout << iOtoN[0] << iOtoN[1] << iOtoN[2] << endl;
+
 	// iOtoN[0], iOtoN[1], iOtoN[2]가 1~9의 숫자 중 랜덤으로 정해짐.
 
+	int iStrike = 0, iBall = 0;
 	int iPn[3] = { 0 };
 
 	cout << "재미있는 야구게임!" << endl;
 	cout << "computer가 3개의 숫자를 정했습니다. 숫자와 순서를 맞춰주세요.";
-	cout << "(입력한 숫자중 0이 있으면 게임이 종료됩니다.)" << endl;
+	cout << "(입력한 숫자 중 0이 있으면 게임이 종료됩니다.)" << endl;
 
-	int iStrike = 0;
-	int iBall = 0
+	
 
 	while (true) {
+
+		
+
 		cout << "입력 : ";
-		cin >> iPn[0], iPn[1], iPn[2];
-				
+		cin >> iPn[0] >> iPn[1] >> iPn[2];
+		
 		// iPn[0]을 0, iOtoN[]들과 비교
 		for (int i = 0; i < 4; ++i) {
 			if (iPn[i] == 0) {
 				cout << "0을 입력하셨으므로 게임이 종료됩니다." << endl;
 				break;
 			}
-			
-			if (iPn[i] == iOtoN[0]) {
+
+			else if (iPn[i] == iOtoN[0]) {
 				if (i == 0) {
 					++iStrike;
 				}
@@ -73,8 +78,8 @@ int main() {
 					++iBall;
 				}
 			}
-			
-			if (iPn[i] == iOtoN[1]) {
+
+			else if (iPn[i] == iOtoN[1]) {
 				if (i == 1) {
 					++iStrike;
 				}
@@ -83,7 +88,7 @@ int main() {
 				}
 			}
 
-			if (iPn[i] == iOtoN[2] {
+			else if (iPn[i] == iOtoN[2]) {
 				if (i == 2) {
 					++iStrike;
 				}
@@ -93,7 +98,16 @@ int main() {
 			}
 		}
 
-		cout << iStrike << "strike, " << iBall << "ball" << endl;
+		if (iStrike == 0 || iBall == 0) {
+			cout << "Out!" << endl;
+			continue;
+		}
+		else {
+			cout << iStrike << "strike, " << iBall << "ball" << endl;
+			continue;
+		}
+
+
 
 		// 3strike 3개의 숫자와 위치를 모두 맞췄을 경우
 		if (iPn[0] == iOtoN[0] && iPn[1] == iOtoN[1] && iPn[3] == iOtoN[3]) {
@@ -102,22 +116,5 @@ int main() {
 		}
 
 
-		// 0을 입력할 경우
-		//if (iPn[0] == 0 || iPn[1] == 0 || iPn[2] == 0) {
-		//	cout << "0을 입력하셨으므로 게임이 종료됩니다." << endl;
-		//	break;
-		//}
-
-
-		// 숫자와 위치 하나도 맞추지 못했을 경우
-		else if(iPn[0])
-
-		// 3개의 숫자와 위치를 맞췄을 경우
-		else if (iPn[0] == iOtoN[0] && iPn[1] == iOtoN[1] && iPn[3] == iOtoN[3]) {
-			cout << "게임에서 승리하셨습니다." << endl;
-			break;
-		}
-		// 숫자와 위치 하나도 맞추지 못
 	}
-
 }

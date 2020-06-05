@@ -36,6 +36,8 @@ int main() {
 	int iStudentCount = 0;
 	int iStdNumber = 1;
 
+	char strName[NAME_SIZE] = {};
+
 	while (true) {
 		system("cls");
 
@@ -53,7 +55,7 @@ int main() {
 		// 맞춰서 값을 입력해야 하는데 실수로 정수가 아닌 문자를 입력할 경우 에러가 발생한다.
 		// 그렇기 때문에 예외처리로 에러가 발생했는지를 여기에서 체크하여 에러가 발생하면
 		// cin 내부의 에러버퍼를 비워주고 cin 내부에 입력버퍼가 있는데 입력버퍼는 입력한 값을
-		// 저장해높고 그 값을 변수에 넣어주는 역할을 한다. 이 입력버퍼에 \n이 남아있으므로
+		// 저장해놓고 그 값을 변수에 넣어주는 역할을 한다. 이 입력버퍼에 \n이 남아있으므로
 		// 버퍼를 순회하여 \n을 지워준다.
 		// 버퍼 : 임시저장공간이다.
 		
@@ -124,8 +126,50 @@ int main() {
 			cout << "학생 추가 완료" << endl;
 			break;
 		case MENU_DELETE:
+			system("cls");
+
+			cout << "=============== 학생삭제 =================" << endl;
+
+			cin.ignore(1024, '\n');
+			cout << "삭제할 이름을 입력하세요 : ";
+			cin.getline(strName, NAME_SIZE);
+
+			// 등록되어있는 학생 수만큼 반복하며 학생을 찾는다.
+			for (int i = 0; i < iStudentCount; ++i) {
+				if (strcmp(tStudentArr[i].strName, strName) == 0) {
+					for (int j = i; j < iStudentCount - 1; ++j) {
+						tStudentArr[j] = tStudentArr[j + 1];
+					}
+					--iStudentCount;
+					cout << "학생을 삭제하였습니다." << endl;
+				}
+
 			break;
 		case MENU_SEARCH:
+			system("cls");
+
+			cout << "=============== 학생탐색 =================" << endl;
+			
+			cin.ignore(1024, '\n');
+			cout << "탐색할 이름을 입력하세요 : ";
+			cin.getline(strName, NAME_SIZE);
+
+
+			// 등록되어있는 학생 수만큼 반복하며 학생을 찾는다.
+			for (int i = 0; i < iStudentCount; ++i) {
+				if (strcmp(tStudentArr[i].strName, strName) == 0) {
+					cout << "이름 : " << tStudentArr[i].strName << endl;
+					cout << "전화번호 : " << tStudentArr[i].strPhoneNumber << endl;
+					cout << "주소 : " << tStudentArr[i].strAddress << endl;
+					cout << "학번 : " << tStudentArr[i].iNumber << endl;
+					cout << "국어 : " << tStudentArr[i].iKor << endl;
+					cout << "영어 : " << tStudentArr[i].iEng << endl;
+					cout << "수학 : " << tStudentArr[i].iMath << endl;
+					cout << "총점 : " << tStudentArr[i].iTotal << endl;
+					cout << "평균 : " << tStudentArr[i].fAvg << endl << endl;
+					break;
+				}
+			}
 			break;
 		case MENU_OUTPUT:
 			system("cls");

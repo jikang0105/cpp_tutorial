@@ -41,6 +41,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "21-22.student_administratio
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "22-1.book_administration_program", "..\22-1.book_administration_program\22-1.book_administration_program.vcxproj", "{DF34F072-702A-4EA7-A5E2-2EAF07E35D4A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "23-29.text_rpg_game", "..\23-29.text_rpg_game\23-29.text_rpg_game.vcxproj", "{99C60319-2768-462B-9F4B-CD12D7E25020}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -201,6 +203,14 @@ Global
 		{DF34F072-702A-4EA7-A5E2-2EAF07E35D4A}.Release|x64.Build.0 = Release|x64
 		{DF34F072-702A-4EA7-A5E2-2EAF07E35D4A}.Release|x86.ActiveCfg = Release|Win32
 		{DF34F072-702A-4EA7-A5E2-2EAF07E35D4A}.Release|x86.Build.0 = Release|Win32
+		{99C60319-2768-462B-9F4B-CD12D7E25020}.Debug|x64.ActiveCfg = Debug|x64
+		{99C60319-2768-462B-9F4B-CD12D7E25020}.Debug|x64.Build.0 = Debug|x64
+		{99C60319-2768-462B-9F4B-CD12D7E25020}.Debug|x86.ActiveCfg = Debug|Win32
+		{99C60319-2768-462B-9F4B-CD12D7E25020}.Debug|x86.Build.0 = Debug|Win32
+		{99C60319-2768-462B-9F4B-CD12D7E25020}.Release|x64.ActiveCfg = Release|x64
+		{99C60319-2768-462B-9F4B-CD12D7E25020}.Release|x64.Build.0 = Release|x64
+		{99C60319-2768-462B-9F4B-CD12D7E25020}.Release|x86.ActiveCfg = Release|Win32
+		{99C60319-2768-462B-9F4B-CD12D7E25020}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

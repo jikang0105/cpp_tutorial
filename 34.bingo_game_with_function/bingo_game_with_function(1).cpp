@@ -20,13 +20,18 @@ void Shuffle(int* pArray);
 AI_MODE SelectAIMode();
 void OutputNumber(int* pArray, int iBingo);
 bool ChangeNumber(int* pArray, int iInput);
-
+int SelectAINumber(int* pArray, AI_MODE eMode);
+int BingoCounting(int* pArray);
+int BingoCountingH(int* pArray);
+int BingoCountingV(int* pArray);
+int BingoCountingLTD(int* pArray);
+int BingoCountingRTD(int* pArray);
 
 int main() {
 	srand((unsigned int)time(0));
 
 	// ai난이도 고르기
-	int iAIMode = SelectAIMode();
+	AI_MODE eAIMode = SelectAIMode();
 
 
 
@@ -57,7 +62,7 @@ int main() {
 
 		cout << "============= COMPUTER =============" << endl;
 
-		switch (iAIMode) {
+		switch (eAIMode) {
 		case AM_EASY:
 			cout << "AIMode : Easy" << endl;
 			break;
@@ -119,46 +124,14 @@ int main() {
 		}
 
 		// ai 난이도 설정
-		switch (iAIMode) {
-		case AM_EASY :
-			iNoneSelectCount = 0;
-			for (int i = 0; i < 25; ++i) {
-				if (iAINumber[i] != INT_MAX) {
-					iNoneSelect[iNoneSelectCount] = iAINumber[i];
-					++iNoneSelectCount;
-				}
-			}
+		iAIInput = SelectAINumber(iAINumber, eAIMode);
 
-			iAIInput = iNoneSelect[rand() % iNoneSelectCount];
+		ChangeNumber(iNumber, iAIInput);
 
-			break;
-		case AM_HARD :
-			int iLine = 0;
-			int iStarCount = 0;
-			int iSaveCount = 0;
-
-			for (int i = 0; i < 5; i++) {
-				for (int j = 0; j < 5; j++) {
-					if (iAINumber[i * 5 + j] == INT_MAX) {
-						++iStarCount;
-					}
-				}
-				if (iStarCount < 5 && iSaveCount < iStarCount) {
-					iLine = i;
-					iSaveCount = iStarCount;
-				}
-			}
-
-			for (int i = 0; i < 5; i++) {
-				for (int j = )
-			}
-
-			break;
-
-
-
-		}
+		ChangeNumber(iAINumber, iAIInput);
 	
+		iBingo = BingoCounting(iNumber);
+		iAIBingo = BingoCounting(iAINumber);
 
 	}
 }
@@ -236,3 +209,180 @@ bool ChangeNumber(int* pArray, int iInput) {
 	// 즉, 중복된 숫자를 입력했기 때문에 true를 리턴한다.
 }
 
+
+int SelectAINumber(int* pArray, AI_MODE eMode) {
+	
+	// 선택 안된 목록 배열을 만들어준다.
+	int iNoneSelect[25] = {};
+
+	// 선택 안된 숫자 개수를 저장한다.
+	int iNoneSelectCount = 0;
+	
+	switch (eMode) {
+	case AM_EASY:
+		iNoneSelectCount = 0;
+		for (int i = 0; i < 25; ++i) {
+			if (pArray[i] != INT_MAX) {
+				iNoneSelect[iNoneSelectCount] = pArray[i];
+				++iNoneSelectCount;
+			}
+		}
+
+		return iNoneSelect[rand() % iNoneSelectCount];
+
+		break;
+	case AM_HARD:
+		int iLine = 0;
+		int iStarCount = 0;
+		int iSaveCount = 0;
+
+		for (int i = 0; i < 5; i++) {
+			iStarCount = 0;
+			for (int j = 0; j < 5; j++) {
+				if (pArray[i * 5 + j] == INT_MAX) {
+					++iStarCount;
+				}
+			}
+			if (iStarCount < 5 && iSaveCount < iStarCount) {
+				iLine = i;
+				iSaveCount = iStarCount;
+			}
+		}
+
+		for (int i = 0; i < 5; i++) {
+			iStarCount = 0;
+			for (int j = 0; j < 5; j++) {
+				if (pArray[j * 5 + i] == INT_MAX) {
+					++iStarCount;
+				}
+			}
+			if (iStarCount < 5 && iSaveCount < iStarCount) {
+				iLine = i + 5;
+				iSaveCount = iStarCount;
+			}
+		}
+
+		iStarCount = 0;
+		for (int i = 0; i < 25; i += 6) {
+			if (pArray[i] == INT_MAX) {
+				++iStarCount;
+			}
+		}
+		if (iStarCount < 5 && iSaveCount < iStarCount) {
+			iLine = LN_D1;
+			iSaveCount = iStarCount;
+		}
+
+		iStarCount = 0;
+		for (int i = 4; i < 20; i += 4) {
+			if (pArray[i] == INT_MAX) {
+				++iStarCount;
+			}
+		}
+		if (iStarCount < 5 && iSaveCount < iStarCount) {
+			iLine = LN_D2;
+			iSaveCount = iStarCount;
+		}
+
+		if (iLine < LN_H5) {
+			for (int i = 0; i < 5; ++i) {
+				if (pArray[iLine * 5 + i] != INT_MAX) {
+					return pArray[iLine * 5 + i];
+				}
+			}
+		}
+		else if (iLine < LN_V5) {
+			for (int i = 0; i < 5; i++) {
+				if (pArray[i * 5 + (iLine - 5)] != INT_MAX) {
+					return pArray[i * 5 + (iLine - 5)];
+				}
+			}
+		}
+		else if (iLine == LN_D1) {
+			for (int i = 0; i < 25; i += 6) {
+				if (pArray[i] != INT_MAX) {
+					return pArray[i];
+				}
+			}
+		}
+		else if (iLine == LN_D2) {
+			for (int i = 4; i <= 20; i += 4) {
+				if (pArray[i] != INT_MAX) {
+					return pArray[i];
+				}
+			}
+		}
+		break;
+	}
+	return -1;
+}
+
+int BingoCounting(int* pArray) {
+	int iBingo = 0;
+	// 가로줄체크
+	iBingo += BingoCountingH(pArray);
+	// 세로줄체크
+	iBingo += BingoCountingV(pArray);
+	// 왼쪽 상단 대각선체크
+	iBingo += BingoCountingLTD(pArray);
+	// 오른쪽 상단 대각선체크
+	iBingo += BingoCountingRTD(pArray);
+
+	return iBingo;
+}
+int BingoCountingH(int* pArray) {
+	int iStar1 = 0, iBingo = 0;
+	for (int i = 0; i < 5; ++i) {
+		iStar1 = 0;
+		for (int j = 0; j < 5; ++j) {
+			if (pArray[i * 5 + j] == INT_MAX) {
+				++iStar1;
+			}
+		}
+		if (iStar1 == 5) {
+			++iBingo;
+		}
+	}
+	return iBingo;
+}
+int BingoCountingV(int* pArray) {
+	int iStar1 = 0, iBingo = 0;
+	for (int i = 0; i < 5; ++i) {
+		iStar1 = 0;
+		for (int j = 0; j < 5; ++j) {
+			if (pArray[j * 5 + i] == INT_MAX) {
+				++iStar1;
+			}
+		}
+		if (iStar1 == 5) {
+			++iBingo;
+		}
+	}
+	return iBingo;
+}
+int BingoCountingLTD(int* pArray) {
+	int iStar1 = 0, iBingo = 0;
+	for (int i = 0; i < 25; i += 6) {
+		if (pArray[i] == INT_MAX) {
+				++iStar1;
+		}
+		
+		if (iStar1 == 5) {
+			++iBingo;
+		}
+	}
+	return iBingo;
+}
+int BingoCountingRTD(int* pArray) {
+	int iStar1 = 0, iBingo = 0;
+	for (int i = 4; i < 21; i += 4) {
+		if (pArray[i] == INT_MAX) {
+			++iStar1;
+		}
+
+		if (iStar1 == 5) {
+			++iBingo;
+		}
+	}
+	return iBingo;
+}
